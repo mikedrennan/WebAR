@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+	<script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+	<script src="https://raw.githack.com/AR-js-org/AR.js/master/aframe/build/aframe-ar.js"></script>
+	<!-- The script below is needed for gestures. Each entity needs 'gesture-handler' and each marker need 'emitevents=true' -->
+	<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+	<!-- This script enables .gltf model animations -->
+	<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+	<body style="margin : 0px; overflow: hidden;">
+		<a-scene arjs='detectionMode: mono_and_matrix; matrixCodeType: 3x3;'
+		         gesture-detector>
+		<a-marker
+		          type='barcode'
+		          value='2'
+		          emitevents="true">
+			<a-entity position="0 -1 0"
+			          scale="0.05 0.05 0.05"
+			          rotation="-90 0 0"
+			          gltf-model="models/exploding_skull/scene.gltf"
+			          animation-mixer
+			          gesture-handler
+			          animation-mixer>
+		</a-entity>
+	</a-marker>
+	<a-entity
+	          camera><
+	          a-entity>
+</a-scene>
+</body>
+</html>

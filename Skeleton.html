@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<title>Model - Skeleton</title>
+	<script src="https://aframe.io/releases/1.4.1/aframe.min.js"></script>
+	<script src="https://raw.githack.com/fcor/arjs-gestures/master/dist/gestures.js"></script>
+	<!-- This script enables .gltf model animations -->
+	<script src="https://cdn.jsdelivr.net/gh/c-frame/aframe-extras@v6.1.1/dist/aframe-extras.min.js"></script>
+	<body>
+		<a-scene>
+			<a-entity position="0 0 0"
+	          scale="0.5 0.5 0.5"
+	          rotation="0 0 0"
+	          gltf-model="models/skeleton/scene.gltf"
+	          gesture-handler>
+            </a-entity>
+			<a-entity
+			          camera
+			          look-controls
+			          wasd-controls="fly: true"
+			          active="true"
+			          position="0, 0, 3"
+			          rotation="0, 0, 0">
+		</a-entity>
+		</a-scene>
+	</body>
+</html>
